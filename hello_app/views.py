@@ -15,7 +15,7 @@ def contact():
     return render_template("contact.html")
 
 @app.route("/hello/")
-@app.route("/hello/<name>")
+@app.route("/hello/<name1>")
 def hello_there(name = None):
     return render_template(
         "hello_there.html",
@@ -24,5 +24,7 @@ def hello_there(name = None):
     )
 
 @app.route("/api/data")
+
+
 def get_data():
     return app.send_static_file("data.json")
